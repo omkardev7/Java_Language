@@ -1,0 +1,22 @@
+package While_loop;
+import java.util.Scanner;
+public class binary_to_decimal {
+
+	public static void main(String[] args) {
+		System.out.println("Enter binary number:");
+		Scanner s =new Scanner(System.in);
+        int n=s.nextInt();
+        
+        int decimal=0;
+        int pow=1;
+        while(n>0) {
+        	int last = n%10;
+        	decimal=decimal + last*pow;
+        	pow*=2;
+        	n=n/10;
+        }
+        System.out.println("decimal value is");
+        System.out.println(decimal);
+	}
+
+}
